@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".PlayerTest2MainActivity" >
+
+    <TextView
+        android:id="@+id/tvLocationGPS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GPS" />
+
+    <TextView
+        android:id="@+id/tvLocation3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvLocationGPS"
+        android:layout_marginTop="33dp"
+        android:text="Location3" />
+
+    <TextView
+        android:id="@+id/tvLocationNetWork"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvLocationGPS"
+        android:text="NetWork" />
+
+    <TextView
+        android:id="@+id/tvLocation4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvLocation3"
+        android:layout_below="@+id/tvLocation3"
+        android:layout_marginTop="21dp"
+        android:text="tvLocation4" />
+
+    <Button
+        android:id="@+id/btnReturn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/etMaxDistance"
+        android:layout_marginRight="40dp"
+        android:text="确定" />
+
+    <CheckBox
+        android:id="@+id/chkDebug"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etMaxDistance"
+        android:layout_below="@+id/btnReturn"
+        android:text="InDebug" />
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnReturn"
+        android:layout_alignBottom="@+id/btnReturn"
+        android:layout_alignLeft="@+id/tvLocation4"
+        android:layout_alignRight="@+id/tvLocation4"
+        android:text="发短信距离" />
+
+    <EditText
+        android:id="@+id/etMaxDistance"
+        android:layout_width="86dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvLocation4"
+        android:layout_marginTop="33dp"
+        android:layout_toLeftOf="@+id/tvUnit"
+        android:ems="10"
+        android:text="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/tvUnit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/etMaxDistance"
+        android:layout_toLeftOf="@+id/btnReturn"
+        android:text="米" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TextView01"
+        android:layout_below="@+id/chkDebug"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/TextView02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tvLocation4"
+            android:layout_alignRight="@+id/tvLocation4"
+            android:layout_below="@+id/TextView01"
+            android:layout_marginTop="33dp"
+            android:text="隔X毫秒响应一次" />
+
+        <EditText
+            android:id="@+id/etPerMilisegundo"
+            android:layout_width="86dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/TextView02"
+            android:ems="10"
+            android:text="15000" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/btnReturn"
+        android:layout_alignTop="@+id/linearLayout1"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/TextView03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tvLocation4"
+            android:layout_alignRight="@+id/tvLocation4"
+            android:layout_below="@+id/TextView01"
+            android:layout_marginTop="33dp"
+            android:text="隔X米响应一次" />
+
+        <EditText
+            android:id="@+id/etPerMetro"
+            android:layout_width="86dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/TextView02"
+            android:ems="10"
+            android:text="15" />
+    </LinearLayout>
+
+</RelativeLayout>
